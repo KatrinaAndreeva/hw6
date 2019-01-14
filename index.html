@@ -1,0 +1,22 @@
+<html>
+<head></head>
+<body>
+    <div>
+        <p>Text</p>
+        <p>Other</p>
+        <p>Next</p>
+        <p>Last</p>
+    </div>
+    <div>gggg</div>
+    <div>ttt</div>
+    <script>
+        console.log(document.head);
+        console.log(document.body);
+        console.log(document.body.children);
+        console.log(document.body.firstElementChild);
+        console.log(document.body.firstElementChild.childNodes);
+        console.log(document.body.childNodes);
+        console.log(Array.prototype.slice.call( document.body.children, 1, -1));
+    </script>
+</body>
+</html>
