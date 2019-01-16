@@ -69,11 +69,30 @@ const deleteTodoItem = (id) => {
  * @param {String} title
  * @param {String} text
  */
-const editTodoItem = (id, title, text) => {
-    if (!id) return console.log("Введите ID");
-   let str = currentTodos(id);
-   console.log(str);
-}
+ const editTodoItem=(id,title,text)=>{
+        var arr=todosStorage.currentTodos,i=arr.length;//if(i>0)
+        while(i--){
+            if(arr[i] && arr[i].hasOwnProperty('id') && arr[i]['id']===id){
+                arr[i]['title']=title;
+                arr[i]['text']=text;
+            }
+        }
+        todosStorage.currentTodos=arr;
+    };
+
+    // for (let i = 0; i < 10; i++) {
+    //     addTodoItem('----'+i,'===='+i);
+    // }
+    // var removeByAttr=function(value){
+    //     if (!value)return console.error("Передайте id удаляемой задачи.");
+    //     var arr=todosStorage.currentTodos,i=arr.length;//if(i>0)
+    //     while(i--){
+    //         if(arr[i] && arr[i].hasOwnProperty('id') && arr[i]['id']===value){
+    //             arr.splice(i,1);
+    //         }
+    //     }
+    //     todosStorage.currentTodos=arr;
+    // };
 
 
 
